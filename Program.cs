@@ -6,10 +6,10 @@ using System.Data;
 Clear();
 try
 {
-    Write("Enter matrix size: ");
+    Write("Enter matrix size, through a space (for example: 4 5): ");
     string[] nums = ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries);
 
-    int[,] array = GetArray(int.Parse(nums[0]));
+    int[,] array = GetArray(int.Parse(nums[0]),int.Parse(nums[1]));
 
     PrintArray(array);
 
@@ -19,9 +19,9 @@ catch
     Write("Error run!");
 }
 
-int[,] GetArray(int rows)
+int[,] GetArray(int rows, int colums)
 {
-    int[,] result = new int[rows, rows];
+    int[,] result = new int[rows, colums];
     int i = 0, j = 0;
     int number = 1;
     
