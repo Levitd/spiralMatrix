@@ -9,7 +9,7 @@ try
     Write("Enter matrix size, through a space (for example: 4 5): ");
     string[] nums = ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries);
 
-    int[,] array = GetArray(int.Parse(nums[0]),int.Parse(nums[1]));
+    int[,] array = GetArray(Convert.ToInt32(nums[0]),Convert.ToInt32(nums[1]));
 
     PrintArray(array);
 
