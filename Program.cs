@@ -29,9 +29,9 @@ int[,] GetArray(int rows, int colums)
     int minY = 0;
     int maxX = result.GetLength(0);
     int maxY = result.GetLength(1);
-    while (minX < maxX)
+    while (minX < maxX ) //&& minY < maxY
     {
-        while (j < maxY)
+        while (j < maxY && number<=rows*colums)
         {
             result[i, j] = number;
             number++;
@@ -39,7 +39,7 @@ int[,] GetArray(int rows, int colums)
         }
         j--;
         i++;
-        while (i < maxX)
+        while (i < maxX && number<=rows*colums)
         {
             result[i, j] = number;
             number++;
@@ -47,7 +47,7 @@ int[,] GetArray(int rows, int colums)
         }
         i--;
         j--;
-        while (j >= minY)
+        while (j >= minY && number<=rows*colums)
         {
             result[i, j] = number;
             number++;
@@ -55,7 +55,7 @@ int[,] GetArray(int rows, int colums)
         }
         i--;
         j++;
-        while (i > minY)
+        while (i >minY && number<=rows*colums) 
         {
             result[i, j] = number;
             number++;
